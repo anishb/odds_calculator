@@ -7,8 +7,9 @@ class MarketException(Exception):
 
 class Market:
 
-    def __init__(self):
+    def __init__(self, name):
         """Initialize with no sides and wagers"""
+        self.name = name
         self.sides = {}
 
     def add_side(self, side):

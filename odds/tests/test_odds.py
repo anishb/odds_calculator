@@ -43,12 +43,12 @@ class OddsTests(unittest.TestCase):
         odds = Odds(Decimal('0.4'))
         self.assertEqual(Decimal('3'), odds.win_from_wager(Decimal('2')))
         odds = Odds(Decimal('0.6'))
-        self.assertEqual(Decimal('1.33'), round(odds.win_from_wager(Decimal('2')), 2))
+        self.assertEqual(Decimal('1.33'), odds.win_from_wager(Decimal('2')))
 
     def test_wager_to_win(self):
         odds = Odds(Decimal('0.6'))
-        self.assertEqual(Decimal('3'), round(odds.wager_to_win(Decimal('2')), 2))
+        self.assertEqual(Decimal('3'), odds.wager_to_win(Decimal('2')))
+
 
 if __name__ == '__main__':
     unittest.main()
-

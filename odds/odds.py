@@ -55,9 +55,8 @@ class Odds:
 
     def win_from_wager(self, wager):
         """Potential win from wager"""
-        return wager * ((Decimal('1') / self.probability) - Decimal('1'))
+        return round(wager * ((Decimal('1') / self.probability) - Decimal('1')), 2)
 
     def wager_to_win(self, win):
         """Wager required to win"""
-        return win / (Decimal('1.0') / self.probability - Decimal('1'))
-
+        return round(win / (Decimal('1.0') / self.probability - Decimal('1')), 2)
